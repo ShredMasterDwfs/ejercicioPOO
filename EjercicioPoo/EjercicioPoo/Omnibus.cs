@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EjercicioPoo
+{
+    public class Omnibus : Transporte
+    {
+        public Omnibus (int pasajeros) : base(pasajeros)
+        {
+            
+        }
+        public override string Avanzar()
+        {
+            return $"Ómnibus avanzando con {pasajeros} pasajeros arriba...";
+        }
+
+        public override string Detenerse()
+        {
+            return $"Ómnibus deteniéndose...";
+        }
+    }
+}
