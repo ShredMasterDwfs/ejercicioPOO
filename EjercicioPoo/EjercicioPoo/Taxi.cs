@@ -8,6 +8,8 @@ namespace EjercicioPoo
 {
     public class Taxi : Transporte
     {
+        private string tipoTransporte = "Taxi";
+
         public Taxi (int pasajeros) : base(pasajeros)
         {
           
@@ -25,6 +27,11 @@ namespace EjercicioPoo
         public override string Detenerse()
         {
             return $"Taxi deteniéndose...";
+        }
+
+        public string TipoTransporte()
+        {
+            return this.tipoTransporte;
         }
     }
 }

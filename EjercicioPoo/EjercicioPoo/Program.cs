@@ -21,8 +21,16 @@ namespace EjercicioPoo
                     tipo = "Omnibus";
                     Console.WriteLine($"Ingrese la cantidad de pasajeros para el {tipo} Nro.{i - modificador}:");
                     int pax = int.Parse(Console.ReadLine());
+
+                    while (pax < 0 || pax > 60)
+                    {
+                        Console.WriteLine("Debe ingresar un número positivo y menor a 60.");
+                        Console.WriteLine($"Ingrese la cantidad de pasajeros para el {tipo} Nro.{i - modificador}:");
+                        pax = int.Parse(Console.ReadLine());
+                    }
+                    
                     Omnibus Obj = new Omnibus(pax);
-                    transportes[i] = $"{tipo} {i + 1}: {Obj.CantidadPax()}";
+                    transportes[i] = $"{Obj.TipoTransporte()} {i + 1}:\t {Obj.CantidadPax()}";
                 } 
                 else
                 {
@@ -30,8 +38,16 @@ namespace EjercicioPoo
                     modificador = 4;
                     Console.WriteLine($"Ingrese la cantidad de pasajeros para el {tipo} Nro.{i - modificador}:");
                     int pax = int.Parse(Console.ReadLine());
+
+                    while (pax < 0 || pax > 4)
+                    {
+                        Console.WriteLine("Debe ingresar un número positivo y menor a 5.");
+                        Console.WriteLine($"Ingrese la cantidad de pasajeros para el {tipo} Nro.{i - modificador}:");
+                        pax = int.Parse(Console.ReadLine());
+                    }
+
                     Taxi Obj = new Taxi(pax);
-                    transportes[i] = $"{tipo} {i - modificador}: {Obj.CantidadPax()}";
+                    transportes[i] = $"{Obj.TipoTransporte()} {i - modificador}: \t  {Obj.CantidadPax()}";
                 }
             }
 
@@ -43,3 +59,4 @@ namespace EjercicioPoo
         }
     }
 }
+
