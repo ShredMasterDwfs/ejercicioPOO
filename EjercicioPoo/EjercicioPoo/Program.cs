@@ -51,6 +51,8 @@ namespace EjercicioPoo
                 }
             }
 
+            Console.WriteLine("TIPO Y NRO. \t PLAZAS \n==============================");
+
             for (int i = 0; i < transportes.Length; i++)
             {
                 Console.WriteLine(transportes[i]);
