@@ -19,5 +19,7 @@ namespace EjercicioPoo
 
         public abstract string Detenerse();
 
+        public abstract string CantidadPax();
+
     }
 }

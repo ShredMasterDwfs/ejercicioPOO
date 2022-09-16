@@ -17,6 +17,11 @@ namespace EjercicioPoo
             return $"Taxi avanzando con {pasajeros} pasajeros arriba...";
         }
 
+        public override string CantidadPax()
+        {
+            return $"{pasajeros} pasajeros.";
+        }
+
         public override string Detenerse()
         {
             return $"Taxi deteniéndose...";
